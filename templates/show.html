@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ book['title'] }} by {{ book['author'] }}</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #008CBA;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #006080;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ book['title'] }} by {{ book['author'] }}</h1>
+    </header>
+    <div class="container">
+        <p><strong>Rating:</strong> {{ book['rating'] }}</p>
+        <p><strong>Review:</strong> {{ book['review'] }}</p>
+        <a href="{{ url_for('index') }}" class="btn">Back to book list</a>
+    </div>
+</body>
+</html>
